@@ -7,12 +7,12 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="default">
 <meta name="apple-mobile-web-app-title" content="Спорт Мордовии">
-<title>Спорт Мордовии — MAX</title>
+<title>Спорт Мордовии — Telegram · интерактивная демонстрация</title>
 <style>
-  :root{color-scheme:light;--bg:#e9f2f9;--surface:#fff;--header:#fff;--text:#162331;--sub:#8a98a5;--line:#e6edf2;--blue:#1686ec;--blue-tint:#eef7ff;--bubble:#fff;--out:#d8efff;--key:#f9fcff;--shadow:0 6px 22px rgba(37,70,105,.08);--input:#f0f3f6}
+  :root{color-scheme:light;--bg:#dfeaf2;--surface:#fff;--header:#fff;--text:#162331;--sub:#8a98a5;--line:#e6edf2;--blue:#2796db;--blue-tint:#e7f5fd;--bubble:#fff;--out:#dbf4dc;--key:#f6fbff;--shadow:0 6px 22px rgba(37,70,105,.08);--input:#f0f3f6}
   *{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
-  html,body{padding:0;margin:0;width:100%;height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;color:var(--text);background:#dbe3ed;font-size:15px}
-  body.dark{color-scheme:dark;--bg:#101826;--surface:#252a38;--header:#161b27;--text:#f1f4fa;--sub:#9ba5b6;--line:#353b49;--blue:#58a5ff;--blue-tint:#253853;--bubble:#2b3448;--out:#254c76;--key:#263447;--shadow:none;--input:#242d3d;background:#0a1019}
+  html,body{padding:0;margin:0;width:100%;height:100%;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Text","Helvetica Neue",Arial,sans-serif;color:var(--text);background:#dee9f0;font-size:15px}
+  body.dark{color-scheme:dark;--bg:#101826;--surface:#252a38;--header:#161b27;--text:#f1f4fa;--sub:#9ba5b6;--line:#353b49;--blue:#66b5ff;--blue-tint:#253853;--bubble:#2b3448;--out:#254c76;--key:#263447;--shadow:none;--input:#242d3d;background:#0a1019}
   button,input{font:inherit}button{touch-action:manipulation;cursor:pointer}button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
   .app{position:relative;width:100%;max-width:458px;height:100vh;height:100dvh;display:flex;flex-direction:column;background:var(--bg);overflow:hidden;margin:auto}
   @media(min-width:600px){body{display:flex;justify-content:center;align-items:center;padding:20px}.app{height:min(890px,calc(100vh - 40px));height:min(890px,calc(100dvh - 40px));border-radius:32px;box-shadow:0 20px 75px rgba(24,43,66,.28);border:7px solid #171d27}.ios-status{display:flex!important}}
@@ -21,7 +21,7 @@
   .header{height:67px;min-height:67px;background:var(--header);display:flex;align-items:center;gap:7px;padding:0 12px;border-bottom:1px solid var(--line);z-index:3;position:relative}
   .iconbtn{background:transparent;border:0;color:var(--text);padding:6px;display:inline-flex;align-items:center;justify-content:center;border-radius:12px;min-width:37px;min-height:39px}.iconbtn:active{background:var(--input)}
   svg.ico{width:23px;height:23px;display:block;fill:none;stroke:currentColor;stroke-linecap:round;stroke-linejoin:round;stroke-width:1.85}.ico.sm{width:19px;height:19px}.ico.tiny{width:15px;height:15px}
-  .avatar{height:41px;width:41px;flex:0 0 41px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#38b3ff 0%,#438aff 46%,#7a6ced 100%);box-shadow:0 1px 3px rgba(27,96,181,.18);font-size:22px;color:white}.avatar.tiny{width:29px;height:29px;flex-basis:29px;font-size:16px}.avatar.list-avatar{width:55px;height:55px;flex-basis:55px;font-size:27px}
+  .avatar{height:41px;width:41px;flex:0 0 41px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#24a8df 0%,#1982c7 100%);box-shadow:0 1px 3px rgba(27,96,181,.18);font-size:22px;color:white}.avatar.tiny{width:29px;height:29px;flex-basis:29px;font-size:16px}.avatar.list-avatar{width:55px;height:55px;flex-basis:55px;font-size:27px}
   .headtext{flex:1;min-width:0}.headtext strong{display:block;font-size:16px;line-height:21px;letter-spacing:-.35px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.headtext small{display:block;color:var(--sub);font-size:12px;line-height:17px;font-weight:450}.demo-dot{color:var(--blue);font-weight:550}
   .chat{position:relative;flex:1;overflow:auto;overscroll-behavior:contain;-webkit-overflow-scrolling:touch;background:var(--bg)}
   .chat:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.38;background-image:radial-gradient(circle at 12% 17%,rgba(139,180,225,.29) 0 2px,transparent 3px),radial-gradient(circle at 70% 37%,rgba(139,180,225,.25) 0 2px,transparent 3px),radial-gradient(circle at 29% 77%,rgba(139,180,225,.15) 0 12px,transparent 13px);background-size:168px 153px,201px 187px,239px 211px}
@@ -39,7 +39,7 @@
   .key{flex:1;min-width:0;border:1px solid #c4def7;background:var(--key);color:#1577d0;border-radius:11px;min-height:42px;padding:9px 6px;text-align:center;font-size:13.5px;font-weight:590;line-height:1.3;white-space:normal;box-shadow:0 1px 3px rgba(74,126,177,.05);transition:background .1s,transform .1s}
   .key:active{background:#dceeff;transform:scale(.99)}body.dark .key{border-color:#3a6695;color:#86beff}body.dark .key:active{background:#324d6b}
   .navkey{font-size:13px;color:#597e9d;background:rgba(255,255,255,.65)}body.dark .navkey{background:#263447;color:#a2b9d5}
-  .userrow{display:flex;justify-content:flex-end;animation:appear .2s ease}.userbubble{max-width:82%;padding:9px 12px 6px;border-radius:16px 16px 5px 16px;background:#d6eeff;color:#162331;box-shadow:0 2px 6px rgba(28,120,199,.07);font-size:14px;line-height:1.45;white-space:pre-wrap}.userbubble .msgmeta{color:#739bb9}body.dark .userbubble{background:#4167a2;color:white}
+  .userrow{display:flex;justify-content:flex-end;animation:appear .2s ease}.userbubble{max-width:82%;padding:9px 12px 6px;border-radius:16px 16px 5px 16px;background:#d9f4dc;color:#162331;box-shadow:0 2px 6px rgba(28,120,199,.07);font-size:14px;line-height:1.45;white-space:pre-wrap}.userbubble .msgmeta{color:#739bb9}body.dark .userbubble{background:#4167a2;color:white}
   .compose-wrap{background:var(--header);border-top:1px solid var(--line);z-index:4;padding:7px 9px calc(7px + env(safe-area-inset-bottom,0px));flex:0 0 auto}
   .compose{display:flex;align-items:center;gap:6px;min-height:43px}.compose .iconbtn{color:#788795;min-width:31px;padding:4px}.compose-input{flex:1;min-width:0;background:var(--input);border:0;outline:0;border-radius:22px;padding:10px 13px;color:var(--text);font-size:16px;line-height:22px;height:42px}.compose-input::placeholder{color:#9ca6b0}
   .send{display:none;height:35px;width:35px;flex:0 0 35px;border-radius:50%;border:0;place-items:center;background:var(--blue);color:#fff}.send .ico{stroke-width:2.2;width:19px;height:19px}.send:active{opacity:.75}.compose.has-text .send{display:grid}.compose.has-text #micButton{display:none}
@@ -49,6 +49,32 @@
   .list-header{background:var(--surface);padding:10px 17px 14px;border-bottom:1px solid var(--line)}.list-headrow{display:flex;align-items:center;justify-content:space-between}.list-headrow h1{font-size:29px;letter-spacing:-.9px;margin:6px 0 12px}.list-headrow button{color:var(--blue)}.list-search{height:38px;background:var(--input);border-radius:10px;display:flex;align-items:center;gap:7px;padding:0 10px;color:var(--sub)}.list-search input{border:0;background:none;outline:0;min-width:0;width:100%;color:var(--text);font-size:16px}.chats-list{background:var(--surface);flex:1;overflow:auto}.list-item{display:flex;align-items:center;gap:12px;padding:13px 16px;border-bottom:1px solid var(--line);background:none;border-left:0;border-right:0;border-top:0;width:100%;text-align:left;color:var(--text)}.list-item:active{background:var(--input)}.list-title{display:flex;justify-content:space-between;align-items:center;gap:7px;font-size:15px;font-weight:650}.list-title time{font-size:11px;color:var(--sub);font-weight:400}.list-sub{font-size:13px;color:var(--sub);margin-top:5px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.tabbar{height:63px;padding-bottom:env(safe-area-inset-bottom,0px);background:var(--surface);border-top:1px solid var(--line);display:grid;grid-template-columns:repeat(4,1fr);align-items:center}.tab{border:0;background:none;color:#9aa7b6;display:flex;flex-direction:column;align-items:center;gap:3px;font-size:10px}.tab.active{color:var(--blue)}.tab .ico{height:23px;width:23px}
   @media(max-width:340px){.key{font-size:12.6px;padding:7px 4px}.bubble-body{font-size:13px}.header{gap:3px;padding:0 7px}.headtext strong{font-size:15px}}
   @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Telegram-style presentation with exact content from the bot's pages.json. */
+.bubble {border:0;box-shadow:0 2px 7px rgba(43,91,126,.09)}
+.keyboard {gap:3px;margin-top:1px}
+.key {background:rgba(255,255,255,.86);border:1px solid rgba(201,222,236,.75);border-radius:9px;min-height:41px;color:#1689ce;font-weight:600;box-shadow:0 1px 4px rgba(34,104,166,.07)}
+.key:hover {background:#e9f5fb}.navkey {font-size:12.8px;background:rgba(247,252,255,.88);color:#217fb8}
+body.dark .key {background:rgba(42,56,74,.95);border-color:#3d526c;color:#8ecfff}
+body.dark .navkey {background:rgba(36,56,77,.95)}
+.conversation {display:flex;flex-direction:column;gap:13px;padding-top:2px}
+.conversation .botrow {align-items:flex-end}
+.conversation .message-stack {max-width:min(100%,350px);width:100%}
+.conversation .bubble {margin-right:5px}
+.conversation .userbubble {background:#d9f4dc}.conversation .userrow {margin-left:42px}
+body.dark .conversation .userbubble {background:#315b53;color:white}
+.chat-inner {justify-content:flex-start;min-height:100%}
+.bubble-title {font-size:14.5px;line-height:1.4}
+.bubble-body {line-height:1.52}
+.copy-line {font-size:11px;color:#8ca2b3;line-height:1.3;opacity:.94;flex-shrink:0}
+.demo-banner {background:rgba(254,250,233,.96);color:#6e5a24;font-size:10.5px;padding:6px 12px;line-height:1.4;border-bottom:1px solid #f3e8c6;display:flex;gap:6px;align-items:center;justify-content:center;text-align:center}
+body.dark .demo-banner{background:#2f3040;color:#e7d8a0;border-bottom-color:#424357}
+.demo-banner b{font-weight:760}
+.key .external{font-size:10px}
+.botrow .avatar.tiny{margin-bottom:3px}
+.bubble-body,.bubble-title {user-select:text}
+@media(min-width:600px) {.app{max-width:475px}}
+
 </style>
 </head>
 <body>
@@ -77,15 +103,17 @@
   <nav class="tabbar" aria-label="Основные разделы"><button class="tab" data-tab="Контакты"><svg class="ico"><use href="#i-user"/></svg>Контакты</button><button class="tab" data-tab="Звонки"><svg class="ico"><use href="#i-phone"/></svg>Звонки</button><button class="tab active" data-tab="Чаты"><svg class="ico"><use href="#i-chat"/></svg>Чаты</button><button class="tab" data-tab="Профиль"><svg class="ico"><use href="#i-user"/></svg>Профиль</button></nav>
  </div>
  <div class="screen" id="chatScreen">
-  <header class="header"><button class="iconbtn" id="backToChats" aria-label="Вернуться к чатам"><svg class="ico"><use href="#i-back"/></svg></button><div class="avatar">🏆</div><div class="headtext"><strong>Спорт Мордовии</strong><small>бот <span class="demo-dot">· демо</span></small></div><button class="iconbtn" id="openContacts" aria-label="Контакты"><svg class="ico"><use href="#i-phone"/></svg></button><button class="iconbtn" id="openMore" aria-label="Дополнительно"><svg class="ico"><use href="#i-more"/></svg></button></header>
-  <main class="chat" id="chatScroll" role="main"><div class="chat-inner" id="chatInner"><span class="day-pill" id="todayLabel">Сегодня</span><div id="sentMessages"></div><div class="botrow" id="botRow"><div class="avatar tiny">🏆</div><div class="message-stack"><article class="bubble" aria-live="polite" id="bubble"><div class="bubble-title" id="msgTitle"></div><div class="bubble-body" id="msgBody"></div><div class="msgmeta"><span id="msgTime">16:14</span><svg class="ico tiny" style="color:#9aaac0"><use href="#i-check"/></svg></div></article><div class="keyboard" id="keyboard"></div></div></div></div></main>
-  <div class="compose-wrap"><form class="compose" id="composeForm"><button type="button" class="iconbtn" id="plusButton" aria-label="Прикрепить"><svg class="ico"><use href="#i-plus"/></svg></button><input id="messageInput" class="compose-input" type="text" autocomplete="off" maxlength="300" placeholder="Сообщение" aria-label="Сообщение"><button type="button" class="iconbtn" id="micButton" aria-label="Записать голосовое"><svg class="ico"><use href="#i-mic"/></svg></button><button class="send" aria-label="Отправить сообщение" type="submit"><svg class="ico"><use href="#i-send"/></svg></button></form></div>
+  <header class="header"><button class="iconbtn" id="backToChats" aria-label="Вернуться к чатам"><svg class="ico"><use href="#i-back"/></svg></button><div class="avatar">🏆</div><div class="headtext"><strong>Спорт Мордовии</strong><small>бот <span class="demo-dot">· интерактивный макет</span></small></div><button class="iconbtn" id="openContacts" aria-label="Контакты"><svg class="ico"><use href="#i-phone"/></svg></button><button class="iconbtn" id="openMore" aria-label="Дополнительно"><svg class="ico"><use href="#i-more"/></svg></button></header>
+  <div class="demo-banner"><span>ⓘ</span><span><b>Демо Telegram-бота:</b> мероприятия и справочные сведения приведены для примера</span></div>
+  <main class="chat" id="chatScroll" role="main"><div class="chat-inner" id="chatInner"><span class="day-pill" id="todayLabel">Сегодня</span><div id="conversation" class="conversation" aria-live="polite"></div></div></main>
+  <div class="compose-wrap"><form class="compose" id="composeForm"><button type="button" class="iconbtn" id="plusButton" aria-label="Прикрепить"><svg class="ico"><use href="#i-plus"/></svg></button><input id="messageInput" class="compose-input" type="text" autocomplete="off" maxlength="300" placeholder="Сообщение или /start" aria-label="Сообщение"><button type="button" class="iconbtn" id="micButton" aria-label="Записать голосовое"><svg class="ico"><use href="#i-mic"/></svg></button><button class="send" aria-label="Отправить сообщение" type="submit"><svg class="ico"><use href="#i-send"/></svg></button></form></div>
  </div>
  <div id="overlayRoot"></div><div class="toast hidden" id="toast" role="status"></div>
 </div>
 <script>
 (function(){'use strict';
-/* Все афиши и часть адресных сведений — демонстрационные. Не использовать как подтвержденную афишу ведомства. */
+// Данные ниже воспроизведены из content/pages.json актуального Telegram-проекта.
+// Сайт является только демонстрацией, обращения к Telegram Bot API отсутствуют.
 const SITE='https://e-mordovia.ru/gosudarstvennaya-vlast-rm/ministerstva-i-vedomstva/minsport/';
 const GTO='https://www.gto.ru/';
 const page={
@@ -132,39 +160,138 @@ const page={
  contacts:{title:'☎️ Контакты Министерства',body:'Министерство спорта Республики Мордовия\n\n📍 Республика Мордовия, г. Саранск, ул. Коммунистическая, д. 33/3\n\n☎️ +7 (8342) 39-14-56\n✉️ komsport@e-mordovia.ru\n\nОфициальный сайт доступен по кнопке ниже.',buttons:[['Официальный сайт ↗','url:'+SITE],['Направить обращение','appeal']]},
  appeal:{title:'✉️ Обращение в Министерство',body:'Для направления официального обращения используйте предусмотренные законодательством электронные каналы.\n\nИзложите суть вопроса и укажите сведения, необходимые для получения ответа.\n\nИнформация о действующем порядке подачи обращений размещена на официальных ресурсах ведомства.',buttons:[['Сайт Министерства ↗','url:'+SITE],['Контакты','contacts']]}
 };
-let current='home',trail=[],pastUser=[],toastTimer=0,displayedList=false;
+let conversation=[];
+let displayedList=false, sheet=null, toastTimer=0;
 const by=id=>document.getElementById(id);
-const icon=id=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('class','ico sm');const u=document.createElementNS('http://www.w3.org/2000/svg','use');u.setAttribute('href','#i-'+id);s.append(u);return s};
 const time=()=>new Date().toLocaleTimeString('ru-RU',{hour:'2-digit',minute:'2-digit'});
-function clock(){by('statusTime').textContent=time();by('msgTime').textContent=time();by('chatListTime').textContent=time();}
-clock();
-function addKey(row,btn,nav=false){const el=document.createElement('button');el.type='button';el.className='key'+(nav?' navkey':'');el.textContent=btn[0];el.addEventListener('click',()=>choose(btn[1]));row.append(el)}
-function buttons(rows){const wrap=by('keyboard');wrap.replaceChildren();rows.forEach(r=>{const line=document.createElement('div');line.className='keyrow';r.forEach(b=>addKey(line,b));wrap.append(line)})}
-function render(){const data=page[current]||page.home;by('msgTitle').textContent=data.title;by('msgBody').textContent=data.body;const b=data.buttons||[];let rows=[];if(current==='home'){for(let i=0;i<6;i+=2)rows.push(b.slice(i,i+2));rows.push(b.slice(6,7))}else b.forEach(x=>rows.push([x]));if(current!=='home'){rows.push([['← Назад','nav:back'],['⌂ Меню','nav:home']])}buttons(rows);const all=Array.from(by('keyboard').querySelectorAll('button'));if(current!=='home')all.slice(-2).forEach(x=>x.classList.add('navkey'));clock();by('botRow').style.animation='none';void by('botRow').offsetWidth;by('botRow').style.animation='appear .18s ease both';requestAnimationFrame(()=>{by('chatScroll').scrollTop=by('chatScroll').scrollHeight>by('chatScroll').clientHeight+80?0:by('chatScroll').scrollHeight})}
-function choose(target){if(target==='nav:back'){back();return}if(target==='nav:home'){home();return}if(target.startsWith('url:')){const url=target.slice(4);window.open(url,'_blank','noopener,noreferrer');return}if(!page[target])return;trail.push(current);current=target;render()}
-function back(){if(trail.length){current=trail.pop();render()}else home()}
-function home(){current='home';trail=[];render()}
-function addUser(text){const row=document.createElement('div');row.className='userrow';const bub=document.createElement('div');bub.className='userbubble';bub.textContent=text;const meta=document.createElement('div');meta.className='msgmeta';meta.textContent=time()+' ✓✓';bub.append(meta);row.append(bub);by('sentMessages').append(row);if(by('sentMessages').childElementCount>3)by('sentMessages').firstElementChild.remove()}
-function sendMessage(){const value=by('messageInput').value.trim();if(!value)return;by('messageInput').value='';by('composeForm').classList.remove('has-text');by('messageInput').blur();addUser(value);const s=value.toLowerCase().replaceAll('ё','е');let target='home';if(s.includes('гто'))target='gto';else if(s.includes('афиш')||s.includes('мероприят'))target='events';else if(s.includes('школ')||s.includes('ребен'))target='schools';else if(s.includes('услуг')||s.includes('разряд'))target='services';else if(s.includes('сво')||s.includes('поддерж'))target='support';else if(s.includes('контакт')||s.includes('телефон')||s.includes('адрес'))target='contacts';else if(s.includes('министерств')||s.includes('минспорт'))target='ministry';trail.push(current);current=target;render()}
-by('composeForm').addEventListener('submit',e=>{e.preventDefault();sendMessage()});
+const icon=id=>{const s=document.createElementNS('http://www.w3.org/2000/svg','svg');s.setAttribute('class','ico sm');const u=document.createElementNS('http://www.w3.org/2000/svg','use');u.setAttribute('href','#i-'+id);s.append(u);return s;};
+function clock(){by('statusTime').textContent=time();by('chatListTime').textContent=time();}
+function scrollBottom(){requestAnimationFrame(()=>{const sc=by('chatScroll');sc.scrollTop=sc.scrollHeight;});}
+function toast(t){const el=by('toast');el.textContent=t;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2300);}
+function makeButton(label,target,screen){
+  const el=document.createElement('button');el.type='button';el.className='key'+(target.startsWith('nav:')?' navkey':'');el.textContent=label;
+  el.addEventListener('click',()=>navigate(screen,target));return el;
+}
+function makeRow(buttons,screen){const line=document.createElement('div');line.className='keyrow';for(const b of buttons)line.append(makeButton(b[0],b[1],screen));return line;}
+function keyboardRows(screen){
+ const data=page[screen.pageId]||page.home;
+ const b=data.buttons||[];const rows=[];
+ if(screen.pageId==='home'){for(let i=0;i<6;i+=2){if(b.slice(i,i+2).length)rows.push(b.slice(i,i+2));}if(b.length>6)rows.push(b.slice(6,7));}
+ else b.forEach(item=>rows.push([item]));
+ if(screen.pageId!=='home'){
+  if(screen.history.length&&screen.history[screen.history.length-1]!=='home')rows.push([['← Назад','nav:back'],['⌂ Меню','nav:home']]);
+  else rows.push([['⌂ Главное меню','nav:home']]);
+ }
+ return rows;
+}
+function renderScreen(screen){
+ const data=page[screen.pageId]||page.home;
+ screen.title.textContent=data.title;
+ screen.body.textContent=data.body;
+ screen.keyboard.replaceChildren();
+ for(const row of keyboardRows(screen))screen.keyboard.append(makeRow(row,screen));
+ screen.timestamp.textContent=time();
+}
+function makeBotScreen(id,history=[]){
+ const screen={pageId:id,history:history.slice()};
+ const row=document.createElement('div');row.className='botrow';
+ const avatar=document.createElement('div');avatar.className='avatar tiny';avatar.textContent='🏆';
+ const stack=document.createElement('div');stack.className='message-stack';
+ const bubble=document.createElement('article');bubble.className='bubble';
+ const title=document.createElement('div');title.className='bubble-title';
+ const body=document.createElement('div');body.className='bubble-body';
+ const meta=document.createElement('div');meta.className='msgmeta';
+ const ts=document.createElement('span');meta.append(ts);bubble.append(title,body,meta);
+ const keyboard=document.createElement('div');keyboard.className='keyboard';
+ stack.append(bubble,keyboard);row.append(avatar,stack);
+ screen.row=row;screen.title=title;screen.body=body;screen.timestamp=ts;screen.keyboard=keyboard;
+ by('conversation').append(row);conversation.push(screen);renderScreen(screen);clock();scrollBottom();return screen;
+}
+function makeHelpScreen(){
+ // /help sends a standalone message in the Python implementation.
+ const sc=makeBotScreen('home');sc.title.textContent='🏆 Спорт Мордовии';
+ sc.body.textContent='Нажимайте кнопки для перехода по разделам. Команда /menu откроет главное меню.';
+ sc.keyboard.replaceChildren(makeRow([['⌂ Главное меню','nav:home']],sc));return sc;
+}
+function addUser(text){
+ const row=document.createElement('div');row.className='userrow';
+ const bubble=document.createElement('div');bubble.className='userbubble';
+ bubble.textContent=text;const meta=document.createElement('div');meta.className='msgmeta';meta.textContent=time()+' ✓✓';
+ bubble.append(meta);row.append(bubble);by('conversation').append(row);scrollBottom();
+}
+function currentScreen(){return conversation[conversation.length-1];}
+function navigate(screen,target){
+ if(target.startsWith('url:')){
+   const url=target.slice(4);
+   if(/^https:\/\//i.test(url)){window.open(url,'_blank','noopener,noreferrer');}
+   else toast('Небезопасная ссылка заблокирована');return;
+ }
+ if(target==='nav:home'){screen.pageId='home';screen.history=[];}
+ else if(target==='nav:back'){
+  screen.pageId=screen.history.length?screen.history.pop():'home';
+ }
+ else if(page[target]){
+  screen.history.push(screen.pageId);
+  if(screen.history.length>20)screen.history.shift();
+  screen.pageId=target;
+ }else{toast('Раздел не найден');return;}
+ renderScreen(screen);scrollBottom();
+}
+function openSection(id){if(displayedList)showBot();const sc=currentScreen();if(sc)navigate(sc,id);else makeBotScreen(id);}
+function matchText(text){const s=text.toLowerCase().replaceAll('ё','е');
+ const keys=[
+ [['гто'],'gto'],
+ [['афиш','мероприят','турнир','соревнован'],'events'],
+ [['школ','ребен','поступ'],'schools'],
+ [['услуг','разряд','судей','вычет'],'services'],
+ [['сво','поддерж','адаптив'],'support'],
+ [['контакт','телефон','адрес','связ'],'contacts'],
+ [['министерств','минспорт'],'ministry']];
+ for(const [parts,id] of keys){if(parts.some(w=>s.includes(w)))return id;}return 'home';
+}
+function sendMessage(){
+ const field=by('messageInput');const value=field.value.trim();if(!value)return;
+ field.value='';by('composeForm').classList.remove('has-text');field.blur();addUser(value);
+ const cmd=value.startsWith('/')?value.split(/\s+/)[0].split('@')[0].toLowerCase():'';
+ if(cmd==='/help')makeHelpScreen();
+ else if(['/start','/menu','/reset'].includes(cmd))makeBotScreen('home');
+ else if(value.length<=256)makeBotScreen(matchText(value));
+ else toast('Сообщение слишком длинное для обработки');
+}
+function closeSheet(){if(sheet){sheet.remove();sheet=null;}}
+function showSheet(title,options){
+ closeSheet();const mask=document.createElement('div');mask.className='sheet-backdrop';mask.addEventListener('click',e=>{if(e.target===mask)closeSheet();});
+ const panel=document.createElement('div');panel.className='sheet';const grab=document.createElement('div');grab.className='grab';panel.append(grab);
+ const titleEl=document.createElement('div');titleEl.className='sheet-head';
+ const h=document.createElement('strong');h.textContent=title;
+ const x=document.createElement('button');x.className='iconbtn';x.append(icon('x'));x.setAttribute('aria-label','Закрыть');x.addEventListener('click',closeSheet);titleEl.append(h,x);panel.append(titleEl);
+ options.forEach(opt=>{const btn=document.createElement('button');btn.className='sheet-option';btn.append(icon(opt[0]));const span=document.createElement('span');span.textContent=opt[1];btn.append(span);btn.addEventListener('click',()=>{closeSheet();opt[2]();});panel.append(btn);});
+ mask.append(panel);by('overlayRoot').append(mask);sheet=mask;
+}
+function toggleTheme(){document.body.classList.toggle('dark');const meta=document.querySelector('meta[name="theme-color"]');meta.content=document.body.classList.contains('dark')?'#161b27':'#ffffff';}
+function showChats(){by('chatScreen').classList.add('hidden');by('listScreen').classList.remove('hidden');displayedList=true;}
+function showBot(){by('listScreen').classList.add('hidden');by('chatScreen').classList.remove('hidden');displayedList=false;scrollBottom();}
+by('composeForm').addEventListener('submit',e=>{e.preventDefault();sendMessage();});
 by('messageInput').addEventListener('input',()=>by('composeForm').classList.toggle('has-text',Boolean(by('messageInput').value.trim())));
-function showChats(){by('chatScreen').classList.add('hidden');by('listScreen').classList.remove('hidden');displayedList=true}function showBot(){by('listScreen').classList.add('hidden');by('chatScreen').classList.remove('hidden');displayedList=false;render()}
-by('backToChats').addEventListener('click',showChats);by('enterBot').addEventListener('click',showBot);by('openContacts').addEventListener('click',()=>choose('contacts'));
-by('searchInput').addEventListener('input',e=>{by('enterBot').style.display='спорт мордовии bot max'.includes(e.target.value.toLowerCase())?'flex':'none'});
-let sheet=null;
-function closeSheet(){if(sheet){sheet.remove();sheet=null}}
-function showSheet(title,options){closeSheet();const mask=document.createElement('div');mask.className='sheet-backdrop';mask.addEventListener('click',e=>{if(e.target===mask)closeSheet()});const panel=document.createElement('div');panel.className='sheet';const grab=document.createElement('div');grab.className='grab';panel.append(grab);const titleEl=document.createElement('div');titleEl.className='sheet-head';const h=document.createElement('strong');h.textContent=title;const x=document.createElement('button');x.className='iconbtn';x.append(icon('x'));x.addEventListener('click',closeSheet);titleEl.append(h,x);panel.append(titleEl);options.forEach(option=>{const btn=document.createElement('button');btn.className='sheet-option';btn.append(icon(option[0]));const span=document.createElement('span');span.textContent=option[1];btn.append(span);btn.addEventListener('click',()=>{closeSheet();option[2]()});panel.append(btn)});mask.append(panel);by('overlayRoot').append(mask);sheet=mask}
-function toast(t){const el=by('toast');el.textContent=t;el.classList.remove('hidden');clearTimeout(toastTimer);toastTimer=setTimeout(()=>el.classList.add('hidden'),2100)}
-function about(){showSheet('Спорт Мордовии',[['info','Информационный помощник Минспорта РМ',()=>toast('Бот для жителей Республики Мордовия')],['home','Главное меню',()=>{showBot();home()}],['moon',document.body.classList.contains('dark')?'Светлая тема':'Тёмная тема',toggleTheme]])}
-function toggleTheme(){document.body.classList.toggle('dark');const theme=document.querySelector('meta[name="theme-color"]');theme.content=document.body.classList.contains('dark')?'#161b27':'#ffffff'}
-by('openMore').addEventListener('click',()=>showSheet('Спорт Мордовии',[['home','Главное меню',home],['phone','Контактные данные',()=>choose('contacts')],['moon',document.body.classList.contains('dark')?'Светлая тема':'Тёмная тема',toggleTheme],['info','О боте',about]]));
-by('plusButton').addEventListener('click',()=>showSheet('Быстрый переход',[['home','Главное меню',home],['chat','Афиша мероприятий',()=>choose('events')],['info','Комплекс ГТО',()=>choose('gto')]]));
-by('micButton').addEventListener('click',()=>toast('Напишите сообщение текстом'));
-by('chatsMore').addEventListener('click',()=>showSheet('MAX',[['chat','Открыть чат',showBot],['moon',document.body.classList.contains('dark')?'Светлая тема':'Тёмная тема',toggleTheme]]));
-document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.tab!=='Чаты')toast('Выберите чат «Спорт Мордовии»')}));
-document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(sheet)closeSheet();else if(displayedList)showBot();else back()}});
-window.addEventListener('popstate',()=>{if(sheet)closeSheet();else if(displayedList)showBot();else back()});
-render();
+by('backToChats').addEventListener('click',showChats);
+by('enterBot').addEventListener('click',showBot);
+by('openContacts').addEventListener('click',()=>openSection('contacts'));
+by('searchInput').addEventListener('input',e=>{by('enterBot').style.display='спорт мордовии bot telegram'.includes(e.target.value.toLowerCase())?'flex':'none';});
+by('openMore').addEventListener('click',()=>showSheet('Спорт Мордовии',[
+ ['home','Главное меню',()=>{showBot();makeBotScreen('home');}],
+ ['phone','Контакты',()=>openSection('contacts')],
+ ['moon',document.body.classList.contains('dark')?'Светлая тема':'Тёмная тема',toggleTheme],
+ ['info','О демонстрации',()=>toast('Макет: действия выполняются внутри браузера')]]));
+by('plusButton').addEventListener('click',()=>showSheet('Быстрый переход',[
+ ['home','Главное меню',()=>makeBotScreen('home')],
+ ['chat','Афиша мероприятий',()=>openSection('events')],
+ ['info','Комплекс ГТО',()=>openSection('gto')]]));
+by('micButton').addEventListener('click',()=>toast('В демоверсии можно отправлять текстовые сообщения'));
+by('chatsMore').addEventListener('click',()=>showSheet('Telegram — демо',[
+ ['chat','Открыть чат',showBot],['moon','Переключить тему',toggleTheme]]));
+document.querySelectorAll('[data-tab]').forEach(b=>b.addEventListener('click',()=>{if(b.dataset.tab!=='Чаты')toast('В макете доступен чат «Спорт Мордовии»');}));
+document.addEventListener('keydown',e=>{if(e.key==='Escape'){if(sheet)closeSheet();else if(displayedList)showBot();else if(currentScreen())navigate(currentScreen(),'nav:back');}});
+clock();makeBotScreen('home');
 })();
 </script>
 </body>
